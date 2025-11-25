@@ -3,6 +3,7 @@ v.48 rapportör: Abdalle
 Deltagare (närvaro): Abdalle, Jordan, Lukas
 
 Vad vi gjorde: 
+
 Vi fortsatte arbetet med ER-modellen och normalisering, skapade databasen i SSMS samt uppdaterade user stories och tasks.
 
 Jordan arbetade i SSMS med att skapa databasen,
