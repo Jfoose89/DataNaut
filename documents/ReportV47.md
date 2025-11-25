@@ -1,0 +1,5 @@
+**Rapportör och datum: Jordan Foose 2025-Nov-18
+**Deltagare (närvaro): Lukas (på plats), Jordan (distans), Abdalle (distans), Anton (frånvaro)
+Sprintmål (veckans DoD): Färdigt ER-diagram och tabellstruktur samt taskboard
+**Vad vi gjorde: Uppdaterade vårt ER Diagram så gott vi kunde till 3NF och User Stories och Tasks lite
+**Problem/hinder: Ingen problem uppstod
