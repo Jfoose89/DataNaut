@@ -1,4 +1,4 @@
-// Unique Constraints query
+-- Unique Constraints query
 
 USE DatanautDB;
 GO
