@@ -1,0 +1,84 @@
+USE DatanautDB;
+GO
+
+CREATE TABLE Project (
+PKProjectID INT IDENTITY(1,1) PRIMARY KEY,
+ProjectName VARCHAR(200) NOT NULL,
+ProjectStartDate DATE NOT NULL,
+ProjectEndDate DATE NULL,
+Budget DECIMAL(12,2) NULL,
+Status VARCHAR(50) NULL
+);
+
+CREATE TABLE Role (
+	PKRoleID INT IDENTITY(1,1) PRIMARY KEY,
+	RoleName VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE ProjectManager (
+PKProjectManagerID INT IDENTITY(1,1) PRIMARY KEY,
+FKRoleID INT NOT NULL,
+CONSTRAINT FK_ProjectManager_Role FOREIGN KEY (FKRoleID)
+	REFERENCES Role(PKRoleID)
+);
+
+CREATE TABLE TeamMember (
+	PKTeamMemberID INT IDENTITY (1,1) PRIMARY KEY,
+	Name VARCHAR (200) NOT NULL,
+	Skill VARCHAR(200) NULL,
+	FKProjectID INT NOT NULL,
+	FKProjectManagerID INT NOT NULL,
+	FKRoleID INT NOT NULL,
+	CONSTRAINT FK_TeamMember_Project FOREIGN KEY (FKProjectID)
+		REFERENCES Project(PKProjectID),
+	CONSTRAINT FK_TeamMember_ProjectManager FOREIGN KEY (FKProjectManagerID)
+		REFERENCES ProjectManager(PKProjectManagerID),
+	CONSTRAINT FK_TeamMember_Role FOREIGN KEY (FKRoleID)
+		REFERENCES Role(PKRoleID)
+);
+
+CREATE TABLE Resources (
+	PKResourceID INT IDENTITY(1,1) PRIMARY KEY,
+	FKProjectID INT NOT NULL,
+	ResourceName VARCHAR(200) NOT NULL,
+	ResourceType VARCHAR(100) NOT NULL,
+	CONSTRAINT FK_Resources_Project FOREIGN KEY (FKProjectID)
+		REFERENCES Project(PKProjectID)
+);
+
+CREATE TABLE Report (
+	PKReportId INT IDENTITY(1,1) PRIMARY KEY,
+	FKProjectId INT NOT NULL,
+	ReportStartDate DATE NOT NULL,
+	ReportEndDate DATE NOT NULL,
+	CONSTRAINT FK_Report_Project FOREIGN KEY (FKProjectId)
+		REFERENCES Project(PKProjectID)
+);
+
+CREATE TABLE TimeLog (
+	PKTimeLogID INT IDENTITY(1,1) PRIMARY KEY,
+	FKTeamMemberID INT NOT NULL,
+	FKReportID INT NOT NULL,
+	Activity VARCHAR(255) NULL,
+	TimeWorked DECIMAL(5,2) NOT NULL,
+	DateLogged DATE NOT NULL,
+	CONSTRAINT FK_TimeLog_TeamMember FOREIGN KEY (FKTeamMemberId)
+		REFERENCES TeamMember(PKTeamMemberId),
+	CONSTRAINT FK_TimeLog_Report FOREIGN KEY (FKReportId)
+		REFERENCES Report(PKReportId)
+);
+
+
+// Unique Constraints query
+
+USE DatanautDB;
+GO
+
+ALTER TABLE Role
+ADD CONSTRAINT UQ_Role_RoleName UNIQUE (RoleName);
+
+ALTER TABLE Resources
+ADD CONSTRAINT UQ_Resources_Name_Project UNIQUE (ResourceName, FKProjectID);
+
+ALTER TABLE Report
+ADD CONSTRAINT UQ_Report_Project_DateRange UNIQUE (FKProjectID, ReportStartDate, ReportEndDate);
