@@ -11,4 +11,4 @@ Vi började med att jobba tillsammans och hjälptes åt att skriva koden på en 
 Problem:
 
 Vi upptäckte att det är ganska problematsikt att alla jobbar i ett eget projekt för att sedan kopiera varandras kod för att lägga ihop det, samtidigt är det inte så effektivt att bara jobba på en dator via skärmdelning när vi ändå är 3 stycken som skulle kunna jobba med flera saker samtidigt. 
-Så vi håller på att utforska om det finns nått sätt att jobba tillsammans i samma projekt i sql likt som vi kunde göra på förra boiler room uppgiften.
+Så vi håller på att utforska om det finns nått sätt att jobba tillsammans i samma projekt i sql likt som vi kunde göra på förra boiler room uppgiften med bank appen.
