@@ -4,7 +4,7 @@ Deltagare : Abdalle, Jordan, Lukas
 
 Vad vi gjorde:
 
-Vi fortsatte arbetet med databasen i SSMS där vi la till constraints och triggers.
+Vi fortsatte arbetet med databasen i SSMS där vi lade in dom sista tabellerna samt lade till constraints och triggers.
 
 Vi började med att jobba tillsammans och hjälptes åt att skriva koden på en dator via skärmdelning och gick sedan över till att alla fick extrimentera och prova gör en egen version för att sedan jämföra och lägga ihop.
 
