@@ -1,0 +1,13 @@
+**Audit trigger on TimeLog
+Automatically logs all changes (INSERT/UPDATE/DELETE) in the TimeLog table.
+This allows us to see what was changed, when, and by whom.
+It is useful for debugging and audit tracking.
+
+**Timestamp triggers (CreatedAt / UpdatedAt)
+When a record is created, CreatedAt is automatically stored.
+When a record is modified, UpdatedAt is automatically updated.
+This allows us to easily track when data was created or last changed.
+
+**Business logic trigger (ProjectStartDate / ProjectEndDate)
+Prevents incorrect date entries, for example if ProjectEndDate is earlier than ProjectStartDate.
+This ensures the data stored in the database is always logically valid.
