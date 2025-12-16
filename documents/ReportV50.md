@@ -1,4 +1,4 @@
-v.49 Rapportör: Abdalle
+v.50 Rapportör: Abdalle
 
 Deltagare (närvaro): Abdalle, Jordan, Lukas
 
