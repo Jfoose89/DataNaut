@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36705.20
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datanaut", "Datanaut.csproj", "{65CBF244-54F2-4F83-B855-55458594EEB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datanaut.Tests", "..\Datanaut.Tests\Datanaut.Tests.csproj", "{BF74E601-120B-4492-8F21-F06453C3DFE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{65CBF244-54F2-4F83-B855-55458594EEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65CBF244-54F2-4F83-B855-55458594EEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65CBF244-54F2-4F83-B855-55458594EEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF74E601-120B-4492-8F21-F06453C3DFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF74E601-120B-4492-8F21-F06453C3DFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF74E601-120B-4492-8F21-F06453C3DFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF74E601-120B-4492-8F21-F06453C3DFE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
